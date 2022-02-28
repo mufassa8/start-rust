@@ -29,5 +29,16 @@ pub fn run(){
     for word in hello.split_whitespace() {
         println!("{}", word);
     }
-    println!("{}", hello);
+    
+    // Create string with capacity
+    let mut s = String::with_capacity(10);
+    s.push('a');
+    s.push('b');
+
+    // Assertion testing
+    assert_eq!(2, s.len());
+    assert_eq!(10, s.capacity());
+
+    println!("{}",s);
+
 }
